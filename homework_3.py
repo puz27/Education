@@ -18,6 +18,7 @@ print('Привет! Предлагаю проверить свои знания
 user_name = input()
 print(f"Привет, {user_name}, начинаем тренировку!")
 
+
 for i in range(count_questions):
     count_false_answer = 0
     print(questions[i])

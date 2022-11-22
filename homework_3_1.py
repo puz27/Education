@@ -1,7 +1,12 @@
+# lists questions and answers
 questions = ["My name ___ Vova", "I ___ a coder", "I live ___ Moscow"]
 answers = ["is", "am", "in"]
+
+# counter user score
 score_right_answer = 0
+# counter user right answers
 count_right_answer = 0
+# counter amount questions
 count_questions = len(questions)
 
 print(count_questions)
@@ -11,6 +16,7 @@ print('Привет! Предлагаю проверить свои знания
 user_name = input()
 print(f"Привет, {user_name}, начинаем тренировку!")
 
+# check user answer
 for i in range(count_questions):
     print(questions[i])
     user_answer = input()
