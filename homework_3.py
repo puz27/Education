@@ -53,5 +53,6 @@ if user_command == 'ready':
     print(f"Вот и все!", f"Вы ответили на {round(count_right_answer)} вопросов из {count_questions} верно.", sep="\n")
     print(f"Вы заработали {score_right_answer} баллов.")
 
+# user does not want to play
 else:
     print('Кажется, вы не хотите играть. Очень жаль.')

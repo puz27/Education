@@ -29,6 +29,6 @@ if user_command == 'ready':
     print(f"Вот и все! Вы ответили на {count_right_answer} вопросов из {count_questions} верно.", sep="\n")
     print(f"Это {percent} процентов.", sep="\n")
 
-# user do not want to play
+# user does not want to play
 else:
     print('Кажется, вы не хотите играть. Очень жаль.')
