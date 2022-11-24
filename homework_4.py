@@ -48,14 +48,14 @@ while True:
         user_words = words_hard
         break
 
-for word in user_words:
-    user_tip = user_words[word]
-    print(f'{word}, {len(user_words[word])} букв, начинается на {user_tip[0]}')
+for key, value in user_words.items():
+
+    print(f'{key}, {len(value)} букв, начинается на {value[0]}')
     user_answer = input().lower()
-    if user_answer == user_words[word]:
-        print(f'Верно, {word} — это {user_words[word]}.')
+    if user_answer == user_words[key]:
+        print(f'Верно, {key} — это {value}.')
         print()
 
     else:
-        print(f'Неверно. {word} — это {user_words[word]}.')
+        print(f'Неверно. {key} — это {value}.')
         print()
