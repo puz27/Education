@@ -56,6 +56,7 @@ while True:
         break
 
 # check user answers and add results in final_user_answer
+# key - word, value - translation
 for key, value in user_words.items():
     print(f'{key}, {len(value)} букв, начинается на {value[0]}')
     user_answer = input().lower()
