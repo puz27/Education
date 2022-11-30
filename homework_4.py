@@ -75,11 +75,9 @@ for answer in final_user_answer:
    if final_user_answer.get(answer) == 'True':
        user_right_answer += 1
        print(answer)
-print("Неправильно отвечены слова:")
 
-for answer in final_user_answer:
-    if final_user_answer.get(answer) == 'False':
-        print(answer)
+print("Неправильно отвечены слова:")
+[print(answer) for answer in final_user_answer if final_user_answer.get(answer) == 'False']
 
 print()
 if user_right_answer in levels:
