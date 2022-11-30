@@ -48,50 +48,63 @@ shift_morse ={
   "(": "-.--.",
   ")": "-.--.-"
 }
-# dictionary of words
-words = ('privet', 'poka', 'folout', 'anton')
+
+# tuple of answers
+words = ('yamaha', 'honda', 'suzuki', 'kawasiki', 'harley-davidson', 'triumph')
+# tuple of words for final statistic
+words_statistic = ('Всего задачек:', 'Отвечено верно:', 'Отвечено неверно:')
+
 # get random word
 def get_word(word):
     """
-    Получает случайное слово
-    из списка слов
+    Get random word from word list
     """
     word = random.choice(word)
     return word
 # get morse code from word
 def morse_encode(word):
+    """
+    Convert word to morse code
+    """
     words_in_morse = []
     [words_in_morse.append(shift_morse[i]) for i in word]
     return '  '.join(words_in_morse)
-
 def print_statistics(answers):
-  #return len(answers)
-  return [i for i in answers if i == True]
+    """
+    Show final information
+    """
+    return len(answers), len([i for i in answers if i == True]), len([i for i in answers if i == False])
 
-
+# list of user answers True and False
 answers = []
 
-# start
-#rundom_slovo = get_word(words)
-#print(rundom_slovo)
-#print(morse_encode(rundom_slovo))
+# greeting
+while True:
+   print("Сегодня мы потренируемся расшифровывать морзянку.", "Нажмите Enter и начнем.", sep="\n")
+   input()
+   break
 
-#while True:
-   # print("Сегодня мы потренируемся расшифровывать морзянку.", "Нажмите Enter и начнем", sep="\n")
-   # input()
-   # break
-
+# check user answers and add results in final_user_answer
 for num_question in range(1, 6):
   rundom_slovo = get_word(words)
+  #print(rundom_slovo )
   print(f'Слово {num_question}  {morse_encode(rundom_slovo)}')
-  if input() == rundom_slovo:
-    print(f'Верно, это слово {rundom_slovo}!')
+  if input().lower() == rundom_slovo:
+    print(f'Верно, это слово {rundom_slovo} !')
     answers.append(True)
   else:
-    print(f'Неверно, это слово {rundom_slovo}!')
+    print(f'Неверно, это слово {rundom_slovo} !')
     answers.append(False)
-z = answers
-print(print_statistics(z))
+
+# final statistic
+print()
+statistic = print_statistics(answers)
+print(f'Всего задачек: {statistic[0]}')
+print(f'Отвечено верно: {statistic[1]}')
+print(f'Отвечено неверно: {statistic[2]}')
+
+
+
 
 
 
