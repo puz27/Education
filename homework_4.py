@@ -2,23 +2,23 @@
 words_easy = {
     "family": "семья",
     "hand": "рука",
-    "people" : "люди",
-    "evening" : "вечер",
-    "minute" : "минута",
+    "people": "люди",
+    "evening": "вечер",
+    "minute": "минута",
 }
 words_medium = {
-    "believe":"верить",
+    "believe": "верить",
     "feel": "чувствовать",
-    "make":"делать",
+    "make": "делать",
     "open": "открывать",
-    "think":"думать",
+    "think": "думать",
 }
 words_hard = {
-    "rural":"деревенский",
+    "rural": "деревенский",
     "fortune": "удача",
-    "exercise":"упражнение",
+    "exercise": "упражнение",
     "suggest": "предлагать",
-    "except":"кроме",
+    "except": "кроме",
 }
 # dictionaries to check user level
 levels = {
@@ -73,7 +73,7 @@ for key, value in user_words.items():
 # print result information
 print("Правильно отвечены слова:")
 for answer in final_user_answer:
-   if final_user_answer.get(answer) == 'True':
+    if final_user_answer.get(answer) == 'True':
        user_right_answer += 1
        print(answer)
 
