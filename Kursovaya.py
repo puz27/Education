@@ -50,7 +50,7 @@ shift_morse ={
 }
 
 # tuple of answers
-words = ('yamaha', 'honda', 'suzuki', 'kawasiki', 'harley-davidson', 'triumph')
+words = ('yamaha', 'honda', 'suzuki', 'kawasaki', 'harley-davidson', 'triumph')
 # tuple of words for final statistic
 words_statistic = ('Всего задачек:', 'Отвечено верно:', 'Отвечено неверно:')
 
@@ -86,14 +86,14 @@ while True:
 
 # check user answers and add results in final_user_answer
 for num_question in range(1, 6):
-  rundom_slovo = get_word(words)
-  #print(rundom_slovo )
-  print(f'Слово {num_question}  {morse_encode(rundom_slovo)}')
-  if input().lower() == rundom_slovo:
-    print(f'Верно, это слово {rundom_slovo} !')
+  random_slovo = get_word(words)
+  print(random_slovo )
+  print(f'Слово {num_question}  {morse_encode(random_slovo)}')
+  if input().lower() == random_slovo:
+    print(f'Верно, это слово {random_slovo} !')
     answers.append(True)
   else:
-    print(f'Неверно, это слово {rundom_slovo} !')
+    print(f'Неверно, это слово {random_slovo} !')
     answers.append(False)
 
 # final statistic
