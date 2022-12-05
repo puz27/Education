@@ -87,7 +87,7 @@ while True:
 # check user answers and add results in final_user_answer
 for num_question in range(1, 6):
   random_slovo = get_word(words)
-  print(random_slovo )
+  # print(random_slovo ) for test
   print(f'Слово {num_question}  {morse_encode(random_slovo)}')
   if input().lower() == random_slovo:
     print(f'Верно, это слово {random_slovo} !')
@@ -102,9 +102,3 @@ statistic = print_statistics(answers)
 print(f'Всего задачек: {statistic[0]}')
 print(f'Отвечено верно: {statistic[1]}')
 print(f'Отвечено неверно: {statistic[2]}')
-
-
-
-
-
-
