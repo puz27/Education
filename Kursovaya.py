@@ -48,36 +48,25 @@ shift_morse ={
   "(": "-.--.",
   ")": "-.--.-"
 }
-
 # tuple of answers
 words = ('yamaha', 'honda', 'suzuki', 'kawasaki', 'harley-davidson', 'triumph')
 # tuple of words for final statistic
 words_statistic = ('Всего задачек:', 'Отвечено верно:', 'Отвечено неверно:')
-
-# get random word
+# list of user answers True and False
+answers = []
 def get_word(word):
-    """
-    Get random word from word list
-    """
+    """Get random word from word list"""
     word = random.choice(word)
     return word
-# get morse code from word
 def morse_encode(word):
-    """
-    Convert word to morse code
-    """
+    """Convert word to morse code"""
     words_in_morse = []
     [words_in_morse.append(shift_morse[i]) for i in word]
     return '  '.join(words_in_morse)
 def print_statistics(answers):
-    """
-    Show final information
-    """
+    """Show final information"""
     return len(answers), len([i for i in answers if i == True]), len([i for i in answers if i == False])
 
-
-# list of user answers True and False
-answers = []
 
 # greeting
 while True:
