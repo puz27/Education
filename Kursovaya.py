@@ -54,25 +54,30 @@ words = ('yamaha', 'honda', 'suzuki', 'kawasaki', 'harley-davidson', 'triumph')
 words_statistic = ('Всего задачек:', 'Отвечено верно:', 'Отвечено неверно:')
 # list of user answers True and False
 answers = []
+
 def get_word(word):
     """Get random word from word list"""
     word = random.choice(word)
     return word
+
+
 def morse_encode(word):
-    """Convert word to morse code"""
-    words_in_morse = []
-    [words_in_morse.append(shift_morse[i]) for i in word]
+    """Get morse code from word"""
+    words_in_morse = [shift_morse[i] for i in word if i in shift_morse.keys()]
     return '  '.join(words_in_morse)
+
+
 def print_statistics(answers):
     """Show final information"""
-    return len(answers), len([i for i in answers if i == True]), len([i for i in answers if i == False])
-
+    return len(answers), len([i for i in answers if i is True]), len([i for i in answers if i is False])
 
 # greeting
 while True:
-   print("Сегодня мы потренируемся расшифровывать морзянку.", "Нажмите Enter и начнем.", sep="\n")
-   input()
-   break
+  print("Сегодня мы потренируемся расшифровывать морзянку.", "Нажмите Enter и начнем.", sep="\n")
+  if input() == "":
+    break
+  else:
+    print("Нажмите Enter")
 
 # check user answers and add results in final_user_answer
 for num_question in range(1, 6):
