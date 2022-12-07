@@ -1,0 +1,346 @@
+'''
+def prostoe(n):
+    flag = True
+    counter = 0
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+n = int(input())
+poisk = n + 1
+while prostoe(poisk) != True:
+    poisk = poisk + 1
+print(poisk)
+
+def is_password_good(password):
+    a1, a2, a3, a4 = False, False, False, False
+    if len(password) >= 8:
+        a1 = True
+    if password.islower() != True:
+        a2 = True
+    if password.isupper() != True:
+        a3 = True
+    for i in password:
+        if i in '1234567890':
+            a4 = True
+            break
+    if password.isdigit() == True:
+        a2 = False
+
+    if a1 and a2 and a3 and a4 == True:
+        return True
+    else:
+        return False
+
+txt = input()
+print(is_password_good(txt))
+
+def is_one_away(word1, word2):
+    k = 0
+    if len(word1) == len(word2):
+       for i in range(len(word1)):
+           if word1[i] != word2[i]:
+               k += 1
+    if k == 1:
+        return True
+    else:
+        return False
+
+txt1 = input()
+txt2 = input()
+
+print(is_one_away(txt1, txt2))
+
+def is_palindrome(text):
+    for i in text:
+        if i in (",.!?-."):
+            text = text.replace(i, '')
+
+    text2 = text[::-1]
+    if text == text2:
+        return True
+    else:
+        return False
+
+s = input().lower().replace(' ', '')
+print(is_palindrome(s))
+
+def is_palindrome(text):
+    for i in text:
+        if i in (",.!?-."):
+            text = text.replace(i, '')
+
+    text2 = text[::-1]
+    if text == text2:
+        return True
+    else:
+        return False
+def prostoe(n):
+        flag = True
+        counter = 0
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+def chet (n):
+    if n % 2 == 0:
+        return True
+def is_valid_password(password):
+    if len(slovo) > 3:
+        return False
+    k1 = is_palindrome(slovo[0])
+    k2 = prostoe(int(slovo[1]))
+    k3 = chet(int(slovo[2]))
+    if k1 and k2 and k3 == True:
+        return True
+    else:
+        return False
+
+psw = input()
+slovo = psw.split(':')
+print(is_valid_password(slovo))
+
+
+def is_correct_bracket(text):
+    if text.count('(') == text.count(')'):
+        return True
+    else:
+        return False
+text = input()
+print(is_correct_bracket(text))
+
+def has_rrr(word):
+   for i in word:
+       if i in 'рР':
+           return True
+   return False
+
+# Не удаляйте код ниже, он нужен для проверки
+
+word = input()
+result = has_rrr(word)
+print(result)
+
+grades = {2:"Плохо", 3:"Удовлетворительно", 4:"Хорошо", 5:"Отлично"}
+
+def ... ()
+    return ...
+
+# Не удаляйте код ниже, он нужен для вызова функции и проверки
+
+grade = int(input())
+print(get_grade(grade))
+
+grades = {2:"Плохо", 3:"Удовлетворительно", 4:"Хорошо", 5:"Отлично"}
+
+def get_grade(grade):
+    if grade == 2:
+        return grades[grade]
+    if grade == 3:
+        return grades[grade]
+    if grade == 4:
+        return grades[grade]
+    if grade == 5:
+        return grades[grade]
+
+# Не удаляйте код ниже, он нужен для вызова функции и проверки
+
+grade = int(input())
+print(get_grade(grade))
+
+def get_grade(points):
+    if 0 <= points <= 40:
+        return "Плохо"
+    elif 41 < points <= 60:
+        return "Удовлетворительно"
+    elif 61 < points <= 80:
+        return "Хорошо"
+    elif 81 < points <= 100:
+        return "Отлично"
+
+# Не удаляйте код ниже, он нужен для проверки
+
+points = int(input())
+grade = get_grade(points)
+print(grade)
+
+def get_period(hour):
+    if 0 <= hour <= 6:
+        return "ночь"
+    elif 7 <= hour <= 11:
+        return "утро"
+    elif 12 <= hour <= 17:
+        return "день"
+    elif 18 <= hour <= 24:
+        return "вечер"
+# Не удаляйте код ниже, он нужен для проверки
+
+hour = int(input())
+time_of_day = get_period(hour)
+print(time_of_day)
+
+def avg(items):
+    s = 0
+    for i in items:
+        s = (s + i)
+    return s / len(items)
+
+# Не удаляйте код ниже, он нужен для проверки
+
+items = [int(x) for x in input().split(" ")]
+items_avg = avg(items)
+print(items_avg)
+
+def get_rur_kop(value):
+    return value // 100
+
+
+# Не удаляйте код ниже, он нужен для проверки
+
+value = int(input())
+result = get_rur_kop(value)
+print(result)
+
+def get_min_sec(sec):
+    time = {}
+    min = sec // 60
+    secunds = sec % 60
+    time['min'] = min
+    time['sec'] = secunds
+    return time
+
+
+# Не удаляйте код ниже, он нужен для проверки
+
+value = int(input())
+result = get_min_sec(value)
+print(result)
+
+
+def get_hashtags(text):
+
+    words = text.split(" ")
+    hashtags = []
+    for word in words:
+        if '#' in word:
+            t = word.replace('#', '')
+            hashtags.append(t)
+    return hashtags
+
+
+# Не удаляйте код ниже, он нужен для проверки
+
+words = input()
+result = get_hashtags(words)
+print(result)
+
+def get_square(radius):
+   return  radius ** 2 * 3.14
+
+
+# Не удаляйте код ниже, он нужен для проверки
+
+radius = int(input())
+square = get_square(radius)
+print(square)
+
+def get_longest(words):
+    t = ''
+    for i in words:
+        if len(i) > len(t):
+            t = i
+    return t
+
+# Не удаляйте код ниже, он нужен для проверки
+
+word = input().split(" ")
+result = get_longest(word)
+print(result)
+
+data = {5000: 1, 10000: 2, 20000: 3, 35000: 4, 50000: 5}
+
+def get_discount(summ):
+    if summ < 5000:
+        return data[5000]
+    elif summ < 10000:
+        return data[10000]
+    elif summ < 20000:
+        return data[20000]
+    elif summ < 35000:
+        return data[35000]
+    elif summ < 50000:
+        return data[50000]
+    else:
+        return 6
+
+# Не удаляйте код ниже, он нужен для проверки
+
+value = int(input())
+result = get_discount(value)
+print(result)
+
+def get_percent_rounded(a ,b):
+    x = round((a / b) * 100)
+    x = str(x)
+    return x + '%'
+
+# Не удаляйте код ниже, он нужен для проверки
+
+a = int(input())
+b = int(input())
+print(get_percent_rounded(a, b))
+
+def hide():
+  my_cats = ["Leo", "Simba", "Loki", "Milo"]
+  my_cats.remove("Loki")
+  my_cats.remove("Milo")
+hide()
+print(my_cats)
+
+def get_middle_point(x1, y1, x2, y2):
+    x3 = (x1 + x2) / 2
+    y3 = (y1 + y2) / 2
+    return x3, y3
+
+print(get_middle_point(0, 0, 10, 0))
+
+import math
+
+
+def get_circle(radius):
+    c = 2 * math.pi * radius
+    s = math.pi * (radius ** 2)
+    return c, s
+
+r = float(input())
+
+# вызываем функцию
+length, square = get_circle(r)
+print(length, square)
+'''
+
+def solve(a, b, c):
+    d = b ** 2 - 4 * a * c
+    if d < 0:
+        print('Нет корней')
+    elif d == 0:
+        x1 = (-b / (2*a))
+        x2 = (-b / (2*a))
+    elif d > 0:
+      x1 = (-b - d ** 0.5) / (2*a)
+      x2 = (-b + d ** 0.5) / (2*a)
+
+    if x2 < x1:
+      return x2, x1
+    else:
+      return x1, x2
+
+
+# считываем данные
+a, b, c = int(input()), int(input()), int(input())
+
+# вызываем функцию
+x1, x2 = solve(a, b, c)
+print(x1, x2)
+
+
