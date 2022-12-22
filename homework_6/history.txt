@@ -1,3 +1,4 @@
-Nick 30
-Serg 10
-Alex 40
+Sergey 30
+ALEX 10
+Serg 30
+Sara 10

@@ -39,8 +39,19 @@ def show_statistic_from_file(file_name):
         for i in file:
             counter_games += 1
             user_result = i.rstrip().split(' ')
-            user_results.append(user_result[1])
-        return str(counter_games), max(user_results)
+            user_results.append(user_result)
+
+            max_count = 0
+            max_count_user_name = ''
+            #print(user_results)
+            for i in range(len(user_results)):
+                #print(user_results[i][1])
+                if int(user_results[i][1]) >= max_count:
+                    max_count = int(user_results[i][1])
+                    max_count_user_name = user_results[i][0]
+
+        #print(max_count_user_name, max_count)
+        return counter_games, max_count_user_name, max_count
 
 
 # start game
@@ -64,4 +75,4 @@ write_statistic_to_file(user_name, count_right_answer, "history.txt")
 
 # read & show user game statistic
 statistic_from_file = show_statistic_from_file("history.txt")
-print(f"\nВсего игр сыграно: {statistic_from_file[0]}\nВаш результат: {count_right_answer}\nМаксимальный рекорд: {statistic_from_file[1]}")
+print(f"\nВсего игр сыграно: {statistic_from_file[0]}\nВаш результат: {count_right_answer}\nМаксимальный рекорд у пользователя с именем {statistic_from_file[1]}: {statistic_from_file[2]}")
