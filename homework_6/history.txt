@@ -1,1 +1,3 @@
-NIKOLAY 30
+Nick 30
+Serg 10
+Alex 40
