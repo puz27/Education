@@ -30,9 +30,15 @@ def write_statistic_to_file(user_name, count_right_answer, file_name):
 
 
 def show_statistic_from_file(file_name):
-    """Take information from file with game statistic and show it"""
+    """Take information from file with game statistic and show count of all games and last best player"""
+    # counter of all games
     counter_games = 0
-    # list where we add all results and after will find best result
+
+    # use to find max result and name
+    max_count = 0
+    max_count_user_name = ''
+
+    # open file with statistic, add information to list user_results
     user_results = []
     path_file_statistic = os.path.join(os.getcwd(), file_name)
     with open(path_file_statistic, 'r') as file:
@@ -41,16 +47,12 @@ def show_statistic_from_file(file_name):
             user_result = i.rstrip().split(' ')
             user_results.append(user_result)
 
-            max_count = 0
-            max_count_user_name = ''
-            #print(user_results)
+            # work with list user_results. find best result
             for i in range(len(user_results)):
-                #print(user_results[i][1])
                 if int(user_results[i][1]) >= max_count:
                     max_count = int(user_results[i][1])
                     max_count_user_name = user_results[i][0]
 
-        #print(max_count_user_name, max_count)
         return counter_games, max_count_user_name, max_count
 
 
