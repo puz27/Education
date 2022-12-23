@@ -1,2 +1,5 @@
 Nick 10
 Paul 10
+Andrey 10
+Viktor 20
+Alex 30

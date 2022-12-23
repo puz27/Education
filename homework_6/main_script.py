@@ -64,7 +64,6 @@ user_question = read_words_from_file("words.txt")
 
 # user answer on questions. count the number of user points
 for i in range(len(user_question)):
-    print(user_question[i])
     print(f"Угадайте слово: {change_word(user_question[i])}")
     if input() == user_question[i]:
         print("Верно! Вы получаете 10 очков.")
@@ -77,4 +76,5 @@ write_statistic_to_file(user_name, count_right_answer, "history.txt")
 
 # read & show user game statistic
 statistic_from_file = show_statistic_from_file("history.txt")
-print(f"\nВсего игр сыграно: {statistic_from_file[0]}\nВаш результат: {count_right_answer}\nМаксимальный рекорд у пользователя с именем {statistic_from_file[1]}: {statistic_from_file[2]}")
+print(f"\nВсего игр сыграно: {statistic_from_file[0]}\nВаш результат: {count_right_answer}\n"
+      f"Последний максимальный рекорд у пользователя с именем {statistic_from_file[1]}: {statistic_from_file[2]}")
