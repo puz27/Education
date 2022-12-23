@@ -15,7 +15,7 @@ def read_words_from_file(file_name):
     """Read words from file, add it to list for user questions"""
     user_questions = []
     path_file_questions = os.path.join(os.getcwd(), file_name)
-    with open(path_file_questions) as file:
+    with open(path_file_questions, encoding='utf-8') as file:
         for i in file:
             user_questions.append(i.rstrip())
     return (user_questions)
@@ -25,7 +25,7 @@ def write_statistic_to_file(user_name, count_right_answer, file_name):
     """Write user name and user counts to file"""
     user_statistic = user_name + ' ' + str(count_right_answer) + '\n'
     path_file_statistic = os.path.join(os.getcwd(), file_name)
-    with open(path_file_statistic, 'a') as file:
+    with open(path_file_statistic, 'a', encoding='utf-8') as file:
         file.write(user_statistic)
 
 
@@ -41,7 +41,7 @@ def show_statistic_from_file(file_name):
     # open file with statistic, add information to list user_results
     user_results = []
     path_file_statistic = os.path.join(os.getcwd(), file_name)
-    with open(path_file_statistic, 'r') as file:
+    with open(path_file_statistic, 'r', encoding='utf-8') as file:
         for i in file:
             counter_games += 1
             user_result = i.rstrip().split(' ')
