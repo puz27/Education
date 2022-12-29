@@ -549,8 +549,6 @@ for i in guides:
        print(f"{in_data['bio']}")
 '''
 
-s = [{'pk': 1, 'full_name': 'Jane Snake', 'skills': ['Python', 'Linux', 'MacOS', 'Docker', 'Flask']}, {'pk': 2, 'full_name': 'Sheri Torres', 'skills': ['Java', 'Swify', 'Fortran', 'Basic']}, {'pk': 3, 'full_name': 'Burt Stein', 'skills': ['Planning', 'Negotiation', 'Management', 'Windows']}, {'pk': 4, 'full_name': 'Bauer Adkins', 'skills': ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js']}]
-dic = []
-for i in s:
-  dic.append(i['pk'])
-print(dic)
+
+
+
