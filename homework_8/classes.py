@@ -1,17 +1,22 @@
 class Question:
-    def __init__(self, text):
+    def __init__(self, text, difficult, right_answer):
+
         self.text = text
-        self.difficult = 1
-        self.right_answer = None
+        self.difficult = difficult
+        self.right_answer = right_answer
+
         self.user_question = False
         self.user_answer = None
         self.user_counts = 0
 
 
-    def get_points(counts):
+    def get_points(text, difficult, counts):
         """Возвращает int, количество баллов.
         Баллы зависят от сложности: за 1 дается 10 баллов, за 5 дается 50 баллов.
         """
+        user_counts = Question(text, difficult, counts)
+        return  user_counts.difficult
+
 
 
     def is_correct():
