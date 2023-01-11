@@ -457,13 +457,15 @@ n = int(input())
 
 # вызываем функцию
 print(number_to_words(n))
-'''
+
 
 n = int(input())
 n_1, n_2, n_3 = bin(n), oct(n), hex(n)
 print(n_1[2:])
 print(n_2[2:])
 print(n_3[2:].upper())
+'''
 
+import
 
 
