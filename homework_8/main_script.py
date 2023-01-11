@@ -18,7 +18,7 @@ while all(check_question_status(questions_information_list)) is False:
 
     # задаем вопрос, если он еще не был задан
     if current_question.is_question_asked is False:
-        print("Вопрос: {} {}\nСложность: {}/5".format(current_question.user_question, current_question.right_answer, current_question.question_difficult))
+        print("Вопрос: {}\nСложность: {}/5".format(current_question.user_question, current_question.question_difficult))
         current_question.user_answer = input()
         print(current_question.build_feedback())
 
