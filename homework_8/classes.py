@@ -11,6 +11,9 @@ class Question:
         self.user_answer = None
         self.user_counts = 0
 
+    def __repr__(self):
+        return str(self.is_question_asked)
+
 
     def get_points(self):
         """Возвращает int, количество баллов.
@@ -41,9 +44,13 @@ class Question:
         if self.is_correct() is True:
             self.user_counts = self.get_points()
             self.is_question_asked = True
+            self.user_answer = True
+
 
             return "Ответ верный, получено {} баллов\n".format(self.get_points())
         else:
+            self.is_question_asked = True
+            self.user_answer = False
             return "Ответ неверный, верный ответ {}\n".format(self.right_answer)
 
 

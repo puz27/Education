@@ -15,4 +15,17 @@ def load_user_statistic(questions_information_list):
     right_answers = 0
     pass
 
+def show_statistic(questions_information_list):
+    score_count = 0
+    count_answers = 0
+    for queation in questions_information_list:
+        score_count += queation.user_counts
+        if queation.user_answer is True:
+            count_answers += 1
+    return "Вот и всё!\nОтвечено на {} вопроса из {}\nНабрано баллов: {}".format(count_answers, len(questions_information_list), score_count)
 
+def check_question_status(questions_information_list):
+    data = []
+    for i in questions_information_list:
+        data.append(i.is_question_asked)
+    return data
