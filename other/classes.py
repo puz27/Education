@@ -377,6 +377,9 @@ class Character():
             print(self.name, "движется", distance, "метров", directions_list[direction])
 
 
+
+
+
 class Hero(Character):
     def __init__(self, name):
         self.name = name
