@@ -1,6 +1,6 @@
 class BasicWord:
     '''
-    class that create instance for work with word and subwords
+    class on the basis of which create instance for work with word and subwords
     '''
     def __init__(self, word: dict, subwords: dict) -> None:
         self.word = word
@@ -30,7 +30,7 @@ class BasicWord:
 
 class Player:
     '''
-    class that create instance for work with user answers and his statistic
+   class on the basis of which create instance for work with user answers and his statistic
     '''
     def __init__(self, name: str) -> None:
         self.name = name
