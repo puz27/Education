@@ -1,6 +1,6 @@
 from utils import *
 
-def main():
+def main() -> None:
     '''
     load data, check user answers, print statistic
     '''
@@ -25,7 +25,7 @@ def main():
             print('{} - cлишком короткое слово'.format(user_word.upper()))
 
         elif user_word not in load_word.subwords:
-            print('Не верно. Слова {} нет в списке допустимых'.format(user_word.upper()))
+            print('Неверно. Слова {} нет в списке допустимых'.format(user_word.upper()))
 
         elif user.check_already_used(user_word) is True:
             print('Слово {} уже использовано'.format(user_word.upper()))
@@ -33,7 +33,8 @@ def main():
         elif load_word.check_subwords(user_word):
             user.add_word_to_used(user_word)
             load_word.check_count_subwords()
-            print('Верно. Слово {} подходит'.format(user_word.upper()))
+            print('Верно. Слово {} подходит. '
+                  'Количество найденных слов на данный момент: {}'.format(user_word.upper(), user.get_count_used_words()))
 
     # print user statistic
     print_statistic(user)
