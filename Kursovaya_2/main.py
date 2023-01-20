@@ -38,3 +38,6 @@ def main() -> None:
 
     # print user statistic
     print_statistic(user)
+
+if __name__ == "__main__":
+    main()

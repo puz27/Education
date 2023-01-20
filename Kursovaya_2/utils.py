@@ -23,7 +23,7 @@ def load_random_word(remote_data: str, local_data: str) -> BasicWord:
     requests.urllib3.disable_warnings()
     response = requests.get(remote_data, verify=False)
 
-    if response.status_code is 200:
+    if response.status_code == 200:
         data = random.choice(response.json())
     else:
         print('Не удается получить доступ к внешним данным, используем локальные данные.')
