@@ -1,0 +1,26 @@
+# def decorator(function):
+#     def wrapper(arg_1):
+#         print("Обработка")
+#         make = function(arg_1)
+#         return make
+#     return wrapper
+
+
+def decorator2(function):
+    def wrapper(*args):
+        print("Считаем сумму...")
+        return function(*args)
+    return wrapper
+
+
+# @decorator
+# def say(data):
+#     return data
+
+
+@decorator2
+def say2(data1: int, data2: int):
+    return data1 + data2
+
+
+print(say2(1, 2))
